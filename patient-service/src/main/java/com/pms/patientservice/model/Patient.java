@@ -15,7 +15,7 @@ import java.util.UUID;
 @Setter
 public class Patient {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_seq")
     private UUID id;
     @NotNull
     private String name;
